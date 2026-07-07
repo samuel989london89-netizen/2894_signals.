@@ -1,6 +1,6 @@
 {
-  "approved": false,
-  "report_date": null,
-  "approved_at": null,
+  "approved": true,
+  "report_date": "2026-07-07",
+  "approved_at": "2026-07-07T13:08:32.183Z",
   "notes": "Solo se envia el email si approved=true y report_date coincide con el ultimo informe."
 }
