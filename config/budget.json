@@ -2,7 +2,7 @@
   "enabled": true,
   "max_generations_per_month": 4,
   "generations_this_month": 1,
-  "month_key": "2026-06",
+  "month_key": "2026-07",
   "estimated_tokens_per_run": 25000,
   "monthly_token_budget": 100000,
   "tokens_used_this_month": 25000,
