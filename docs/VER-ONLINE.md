@@ -10,6 +10,12 @@ Cuando GitHub Pages este activo, tu enlace es:
 node scripts/get-public-url.js
 ```
 
+**Importante:** el repo del newsletter se llama `2894_signals.` (con punto final) porque ya tienes otro proyecto en GitHub llamado `2894_signals` (sin punto). Por eso la URL correcta lleva ese punto:
+
+```
+https://samuel989london89-netizen.github.io/2894_signals./news/
+```
+
 **Sin dominio propio**, GitHub incluye tu usuario en la URL.  
 Para un enlace limpio (sin eso): `docs/ENLACE-LIMPIO.md`
 
@@ -17,7 +23,7 @@ Para un enlace limpio (sin eso): `docs/ENLACE-LIMPIO.md`
 
 ## Activar GitHub Pages (una sola vez, 2 minutos)
 
-1. Abre: https://github.com/samuel989london89-netizen/Storyboard-creator/settings/pages
+1. Abre: https://github.com/samuel989london89-netizen/2894_signals./settings/pages
 2. En **Source** / **Build and deployment**:
    - Source: **GitHub Actions**
 3. Guarda
