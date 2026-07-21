@@ -1,0 +1,74 @@
+flowchart LR
+    inicio([Brief o asset existente])
+
+    subgraph diseno ["Diseno y tokens"]
+        codigoReact[Codigo React]
+        figmaImport[Figma import con variables]
+        designTokens[Variables del archivo]
+        codigoReact --> figmaImport
+        figmaImport --> designTokens
+    end
+
+    subgraph imagen ["Imagen on-brand"]
+        refMarca[Ilustracion de marca]
+        styleMatch[Canva Style Match]
+        fotosProducto[Fotos de producto]
+        refMarca --> styleMatch
+        styleMatch --> fotosProducto
+    end
+
+    subgraph edicion ["Edicion regional"]
+        assetAprobado[Asset aprobado]
+        tipoCambio{Que cambiar?}
+        seedream[Seedream 5.0 Pro]
+        editStudio[Runway Edit Studio]
+        previewFrame[Preview frame]
+        renderClip[Render clip]
+        assetAprobado --> tipoCambio
+        tipoCambio -->|"Solo imagen"| seedream
+        tipoCambio -->|"Video"| previewFrame
+        previewFrame --> editStudio
+        editStudio --> renderClip
+    end
+
+    subgraph video ["Video sin reshoot"]
+        stillHero[Still de producto]
+        seedance[Seedance 2.5]
+        premierePhoto[Premiere Photo to Video]
+        stillHero --> seedance
+        stillHero --> premierePhoto
+    end
+
+    subgraph recuperar ["Recuperar trabajo"]
+        chatgptSearch[ChatGPT busqueda unificada]
+        variantePrev[Moodboard o variante]
+        chatgptSearch --> variantePrev
+    end
+
+    subgraph retoque ["Retoque Adobe"]
+        psReflection[Photoshop Reflection Removal]
+        psRemove[Remove Tool offline]
+    end
+
+    entrega[/Entrega al cliente/]
+
+    inicio --> designTokens
+    inicio --> fotosProducto
+    inicio --> variantePrev
+    designTokens --> assetAprobado
+    fotosProducto --> assetAprobado
+    variantePrev --> assetAprobado
+    stillHero --> assetAprobado
+    psReflection --> assetAprobado
+    psRemove --> assetAprobado
+    seedream --> entrega
+    renderClip --> entrega
+    seedance --> entrega
+    premierePhoto --> entrega
+
+    style diseno fill:#C2E5FF,stroke:#3DADFF
+    style imagen fill:#DCCCFF,stroke:#874FFF
+    style edicion fill:#FFECBD,stroke:#FFC943
+    style video fill:#CDF4D3,stroke:#66D575
+    style recuperar fill:#FFE0C2,stroke:#FF9E42
+    style retoque fill:#FFCDC2,stroke:#FF7556
